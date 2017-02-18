@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>infinispan-embedded-server-spring-boot-parent</artifactId>
+        <groupId>org.littlewings</groupId>
+        <version>0.1.0</version>
+        <relativePath>../infinispan-embedded-server-spring-boot-parent</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>infinispan-embedded-server-spring-boot-starter-test-mixed</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.littlewings</groupId>
+            <artifactId>infinispan-embedded-server-spring-boot-starter-hotrod</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.littlewings</groupId>
+            <artifactId>infinispan-embedded-server-spring-boot-starter-memcached</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.littlewings</groupId>
+            <artifactId>infinispan-embedded-server-spring-boot-starter-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.spec.javax.annotation</groupId>
+            <artifactId>jboss-annotations-api_1.2_spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-client-hotrod</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-query-dsl</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.spy</groupId>
+            <artifactId>spymemcached</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

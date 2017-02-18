@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>infinispan-embedded-server-spring-boot-parent</artifactId>
+        <groupId>org.littlewings</groupId>
+        <version>0.1.0</version>
+        <relativePath>../infinispan-embedded-server-spring-boot-parent</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>infinispan-embedded-server-spring-boot-starter-rest</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.littlewings</groupId>
+            <artifactId>infinispan-embedded-server-spring-boot</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-server-rest</artifactId>
+            <classifier>classes</classifier>
+        </dependency>
+    </dependencies>
+</project>
