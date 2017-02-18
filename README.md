@@ -131,8 +131,8 @@ public class App {
 
 #### configuration
 ```properties
-#infinispan.embedded.server.rest.cache-names=
-#infinispan.embedded.server.rest.port=
+infinispan.embedded.server.rest.cache-names=
+infinispan.embedded.server.rest.port=
 ...
 ```
 
