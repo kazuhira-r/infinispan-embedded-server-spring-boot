@@ -1,4 +1,4 @@
-# Infinispan Embedded Server Spring Boot
+# Infinispan Embedded Server Spring Boot [![Build Status](https://travis-ci.org/kazuhira-r/infinispan-embedded-server-spring-boot.svg?branch=master)](https://travis-ci.org/kazuhira-r/infinispan-embedded-server-spring-boot)
 
 Infinispan Embedded Server for Spring Boot.
 
