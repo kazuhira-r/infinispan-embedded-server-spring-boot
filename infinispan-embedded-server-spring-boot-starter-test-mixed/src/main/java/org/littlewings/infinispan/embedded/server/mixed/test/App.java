@@ -1,8 +1,8 @@
 package org.littlewings.infinispan.embedded.server.mixed.test;
 
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.infinispan.configuration.cache.ConfigurationBuilder;
 import org.infinispan.manager.DefaultCacheManager;
@@ -32,10 +32,15 @@ public class App {
                                                      InfinispanEmbeddedRestServerProperties restServerProperties) {
         EmbeddedCacheManager cacheManager = new DefaultCacheManager(new ConfigurationBuilder().build());
 
-        Set<String> cacheNames = new HashSet<>();
-        cacheNames.addAll(hotRodServerProperties.getCacheNames() != null ? hotRodServerProperties.getCacheNames() : Collections.emptySet());
-        cacheNames.addAll(memcachedServerProperties.getCacheNames() != null ? memcachedServerProperties.getCacheNames() : Collections.emptySet());
-        cacheNames.addAll(restServerProperties.getCacheNames() != null ? restServerProperties.getCacheNames() : Collections.emptySet());
+        Set<String> cacheNames =
+                Arrays
+                        .asList(hotRodServerProperties.getCacheNames(),
+                                memcachedServerProperties.getCacheNames(),
+                                restServerProperties.getCacheNames())
+                        .stream()
+                        .filter(c -> c != null)
+                        .flatMap(c -> c.stream())
+                        .collect(Collectors.toSet());
 
         cacheNames.forEach(cacheName -> cacheManager.defineConfiguration(cacheName, new ConfigurationBuilder().build()));
 
