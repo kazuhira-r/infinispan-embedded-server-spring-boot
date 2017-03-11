@@ -1,7 +1,7 @@
 package org.littlewings.infinispan.embedded.server.rest;
 
 import org.infinispan.manager.EmbeddedCacheManager;
-import org.infinispan.rest.NettyRestServer;
+import org.infinispan.rest.embedded.netty4.NettyRestServer;
 import org.infinispan.rest.configuration.RestServerConfiguration;
 import org.jboss.logging.Logger;
 import org.springframework.context.SmartLifecycle;

@@ -1,6 +1,6 @@
 package org.littlewings.infinispan.embedded.server.rest;
 
-import org.infinispan.rest.NettyRestServer;
+import org.infinispan.rest.embedded.netty4.NettyRestServer;
 import org.infinispan.rest.configuration.RestServerConfiguration;
 import org.littlewings.infinispan.embedded.server.core.InfinispanEmbeddedServerConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
