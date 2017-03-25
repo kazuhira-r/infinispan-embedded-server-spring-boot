@@ -16,7 +16,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <spring.boot.version>1.5.2.RELEASE</spring.boot.version>
-        <infinispan.version>9.0.0.CR3</infinispan.version>
+        <infinispan.version>9.0.0.CR4</infinispan.version>
 
         <resteasy.version>3.1.1.Final</resteasy.version>
         <spymemcached.version>2.12.2</spymemcached.version>
