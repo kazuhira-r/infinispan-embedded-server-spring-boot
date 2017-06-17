@@ -1,6 +1,6 @@
 package org.littlewings.infinispan.embedded.server.rest;
 
-import org.infinispan.rest.embedded.netty4.NettyRestServer;
+import org.infinispan.rest.RestServer;
 import org.infinispan.rest.configuration.RestServerConfiguration;
 import org.littlewings.infinispan.embedded.server.core.InfinispanEmbeddedServerConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(InfinispanEmbeddedRestServerInitializerConfiguration.class)
-@ConditionalOnClass(NettyRestServer.class)
+@ConditionalOnClass(RestServer.class)
 @EnableConfigurationProperties(InfinispanEmbeddedRestServerProperties.class)
 public class InfinispanEmbeddedRestServerConfiguration implements InfinispanEmbeddedServerConfiguration {
     @Bean
