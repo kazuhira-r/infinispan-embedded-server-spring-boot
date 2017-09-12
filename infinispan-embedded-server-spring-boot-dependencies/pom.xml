@@ -15,7 +15,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <spring.boot.version>1.5.6.RELEASE</spring.boot.version>
+        <spring.boot.version>1.5.7.RELEASE</spring.boot.version>
         <infinispan.version>9.1.0.Final</infinispan.version>
 
         <resteasy.version>3.1.3.Final</resteasy.version>
