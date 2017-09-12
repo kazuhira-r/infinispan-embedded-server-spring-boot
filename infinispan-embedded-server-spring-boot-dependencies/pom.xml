@@ -18,7 +18,7 @@
         <spring.boot.version>1.5.7.RELEASE</spring.boot.version>
         <infinispan.version>9.1.0.Final</infinispan.version>
 
-        <resteasy.version>3.1.3.Final</resteasy.version>
+        <resteasy.version>3.1.4.Final</resteasy.version>
         <spymemcached.version>2.12.3</spymemcached.version>
 
         <jboss.jaxrs.api.2.0.spec.version>1.0.1.Beta1</jboss.jaxrs.api.2.0.spec.version>
