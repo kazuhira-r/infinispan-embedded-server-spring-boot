@@ -16,30 +16,46 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <spring.boot.version>2.0.5.RELEASE</spring.boot.version>
-        <infinispan.version>9.3.3.Final</infinispan.version>
+        <infinispan.version>9.4.0.Final</infinispan.version>
 
         <resteasy.version>3.1.4.Final</resteasy.version>
         <spymemcached.version>2.12.3</spymemcached.version>
 
         <jboss.jaxrs.api.2.0.spec.version>1.0.1.Beta1</jboss.jaxrs.api.2.0.spec.version>
         <jboss.annotations.api.1.2.spec.version>1.0.0.Final</jboss.annotations.api.1.2.spec.version>
+
+        <log4j2.version>2.10.0</log4j2.version>
+        <junit.jupiter.version>5.1.1</junit.jupiter.version>
+
+        <maven.plugin.surefire.version>2.22.0</maven.plugin.surefire.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.infinispan</groupId>
-                <artifactId>infinispan-bom</artifactId>
+                <artifactId>infinispan-core</artifactId>
                 <version>${infinispan.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.infinispan</groupId>
+                <artifactId>infinispan-server-hotrod</artifactId>
+                <version>${infinispan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.infinispan</groupId>
+                <artifactId>infinispan-server-memcached</artifactId>
+                <version>${infinispan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.infinispan</groupId>
+                <artifactId>infinispan-server-rest</artifactId>
+                <version>${infinispan.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
+                <artifactId>spring-boot-starter</artifactId>
                 <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.spec.javax.ws.rs</groupId>
