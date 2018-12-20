@@ -1,6 +1,7 @@
 package org.littlewings.infinispan.embedded.server.mixed.test;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -38,8 +39,8 @@ public class App {
                                 memcachedServerProperties.getCacheNames(),
                                 restServerProperties.getCacheNames())
                         .stream()
-                        .filter(c -> c != null)
-                        .flatMap(c -> c.stream())
+                        .filter(Objects::nonNull)
+                        .flatMap(Set::stream)
                         .collect(Collectors.toSet());
 
         cacheNames.forEach(cacheName -> cacheManager.defineConfiguration(cacheName, new ConfigurationBuilder().build()));
