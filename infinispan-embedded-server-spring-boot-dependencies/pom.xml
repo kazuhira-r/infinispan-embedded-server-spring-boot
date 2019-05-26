@@ -78,7 +78,8 @@
             <dependency>
                 <groupId>net.spy</groupId>
                 <artifactId>spymemcached</artifactId>
-                <version>${spymemcached.version}</version>
+		<version>${spymemcached.version}</version>
+		<scope>test</scope>
             </dependency>
 
             <dependency>
